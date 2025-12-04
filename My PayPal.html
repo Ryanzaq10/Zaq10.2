@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paypal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "ubuntu", sans-serif;
+        }
+        .nav{
+            display: inline-flex;
+            width: 100%;
+            background: white;
+            box-shadow: 0px 0px 20px;
+        }
+        .logo{
+            padding: 20px;
+            position: relative;
+            left: 30px;
+        }
+        .personal{
+            padding: 20px;
+            position: relative;
+            left: 400px;
+        }
+        .left_right{
+            display: none;
+            position: absolute;
+            right: 800px;
+        }
+        .left_right:hover{
+            background-color: blue;
+        }
+        .buttons{
+            padding: 20px;
+            position: relative;
+            left: 700px;
+        }
+        .buttons:hover .left_right{
+            background-color: aqua;
+        }
+        .log{
+            padding: 9px;
+            border-radius: 20px;
+            width: 90px;
+            border-width: 1px;
+            background-color: white;
+            border: solid;
+            border-color: rgba(4, 52, 244, 0.753);
+        }
+        .sign{
+            padding: 9px;
+            border-radius: 20px;
+            width: 90px;
+            background-color: rgba(4, 52, 244, 0.753);
+            border-width: 1px;
+            border: solid;
+            border-color: rgba(4, 52, 244, 0.753);
+        }
+        .img{
+            width: 100%;
+            height: 400px;
+        }
+        .phone_hold{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 20 0px;
+        }
+        .head{
+            margin: 0;
+            padding: 20px;  
+            text-align: center;
+            position: absolute;
+            bottom: 170px;
+            left: 350px;
+        }
+        .header{
+            padding: 20px;
+            padding-bottom: 50px;
+            color: white;
+        }
+        .free_signup{
+            color: white;
+            width: 350px;
+            padding: 17px;
+            border-radius: 30px; border-width: 0;
+            background-color: rgb(7, 81, 243);
+        }
+        .links{
+            padding: 20px;
+            color: white;
+        }
+        .link{
+            color: white;
+            text-decoration: none;
+        }
+        .more{
+            text-align: center;
+            padding: 20px;
+            padding-bottom: 100px;
+        }
+        .learn_more{
+            position: relative; top: 30px;
+            padding: 15px; width: 200px;
+            border-radius: 30px;
+            background-color: white;
+            border-color: blue; border-width: 1px;
+        }
+        .dark{
+            background: rgb(241, 241, 241);
+            padding-bottom: 40px;
+        }
+        .Instructions{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .for_buyers{
+            text-align: center;
+            padding: 20px;
+            text-decoration: underline;
+        }
+        .learnmore{
+            margin-top: 40px;
+            margin-left: 43%;
+            padding: 15px; width: 200px;
+            border-radius: 30px;
+            background-color: none;
+            border-color: blue; border-width: 1px;
+        }
+        .joinus{
+            padding: 50px;
+            padding-block: 70px;
+            display: grid;
+            grid-template-columns: 10fr 10fr 1fr;
+            column-gap: 40px;
+            background: rgb(30, 30, 145);
+            color: white;
+        }
+        .join{
+            padding: 30px;
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .security h4{
+            padding-block: 10px;
+            font-size: 30px;
+        }
+        .fees h4{
+            padding-block: 10px;
+            font-size: 30px;
+        }
+        .fees{
+            position: relative;
+            left: 91.5px;
+        }
+        .joinus a{
+            color: white;
+            text-decoration: none;
+        }
+        .lastbt{
+            background: rgb(241, 241, 241);;
+            padding: 70px;
+            text-align: center;
+        }
+        .lastbt h3{
+            font-size: 30px;
+            padding: 30px;
+        }
+        .lastbt button{
+            color: white;
+            width: 350px;
+            padding: 17px;
+            border-radius: 30px; border-width: 0;
+            background-color: rgb(7, 81, 243);
+        }
+        .lastmenu{
+            padding: 80px;
+            padding-block: 70px;
+        }
+        .toplast{
+            word-spacing: 20px;
+            padding-block: 10px;
+        }
+        .toplast a{
+            color: black;
+            text-decoration: none;
+        }
+        .leftt{
+            word-spacing: 20px;
+            padding-block: 10px;
+        }
+        .leftt a{
+            color: grey;
+            text-decoration: none;
+        }
+        .btmlast{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        .rightt{
+            padding-block: 10px;
+            display: flex;
+            justify-content: end;
+            color: grey;
+        }
+        .rightt p{
+            margin-right: 10px;
+        }
+        .mumuas{
+            word-spacing: 20px;
+            color: grey;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav Bar -->
+     <section class="nav">
+        <!-- Logo -->
+         <div class="logo">
+            <img src="/Images/Paypal_logo.png" width="150px" alt="">
+         </div>
+
+        <!-- Personal -->
+         <section class="personal">
+            <h3 style="position: relative; top: 10px;">Personal</h3>
+            <section class="left_right">
+                <div class="left">
+                    <div class="left1">
+                        <h3>How PayPal Works</h3>
+                        <small>What you can do with a personal account</small>
+                    </div>
+                    <div class="left2">
+                        <h3>Pay Online</h3>
+                        <small>Online payments without borders</small>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right1">
+                        <h3>Send Payments</h3>
+                        <small>Send payments abroad</small>
+                    </div>
+                    <div class="right2">
+                        <h3>Search for Deals</h3>
+                        <small>Pay with Paypal and save more money</small>
+                    </div>
+                </div>
+            </section>
+         </section>
+
+        <!-- Buttons -->
+         <div class="buttons">
+            <button class="log" onclick="check()">Log In</button>
+            <button class="sign">Sign Up</button>
+         </div>
+     </section>
+
+     <!-- Home -->
+      <section class="home">
+        <div class="img">
+          <img class="phone_hold" src="https://images.unsplash.com/photo-1733714654294-a4004333c11e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fEElMjBndXklMjB1c2luZyUyMGhpcyUyMHBob25lfGVufDB8fDB8fHww" alt="">
+          <section class="head">
+            <h1 class="header">The simpler, safer way to pay online.</h1>
+            <button class="free_signup">Sign Up for Free</button>
+            <div class="links"><small>Own a business?</small> <small><a class="link" href="">Open a Business account.</a></small></div>
+         </section>
+        </div>
+      </section>
+
+      <!-- More -->
+       <section class="more">
+        <h1 style="padding: 80px;">PayPal is for everyone who pays online.</h1>
+        <img  style="position: relative; bottom: 20px;" src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/gb/en/home/1-individuals.jpg" alt="image">
+        <h2 style="position: relative; bottom: 10px;">Individuals</h2>
+        <p style="position: relative; top: 8px;">Find out why we have more than 200M active accounts worldwide.</p>
+        <button class="learn_more">Learn More</button>
+       </section>
+
+       <!-- Instructions -->
+       <section class="dark">
+        <h1 style="text-align: center; padding: 20px;">PayPal connects buyers and sellers.</h1>
+        <p class="for_buyers">For buyers</p>
+        <section class="Instructions">
+            <div>
+                <img style="margin-left: 100px;" src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/shared/send-only-no-p2p/buyonline_browser1.png" width="150px" alt="">
+                <p><a href="">Sign Up</a> with just an email address and password.</p>
+            </div>
+            <div>
+                <img style="margin-left: 14px;" src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/shared/send-only-no-p2p/buyonline_browser2.png" width="150px" alt="">
+                <p>Securely add your cards.</p>
+            </div>
+            <div>
+                <img style="margin-left: 65px;" src="https://www.paypalobjects.com/digitalassets/c/website/marketing/emea/shared/send-only-no-p2p/buyonline_browser3.png" width="150px" alt="">
+                <p style="flex-wrap: nowrap;">Use the PayPal button to check out with<br>just an email address and password.</p>
+            </div>
+        </section>
+        <button class="learnmore">Learn More</button>
+       </section>
+
+       <!-- Join Us -->
+       <section class="joinus">
+        <div class="join">
+            <h1>Join 200M active PayPal accounts worldwide.</h1>
+        </div>
+        <div class="security">
+            <h4>Safer and protected</h4>
+            <p>Shop with peace of mind. We don’t share your full financial information with sellers. And PayPal Buyer Protection covers your eligible purchases if they don’t show up or match their description.</p>
+            <br>
+            <a href="">More about security</a>
+        </div>
+        <div class="fees">
+            <h4>Mostly free, always upfront</h4>
+            <p>It’s free to open a PayPal account and buy something using PayPal unless it involves a currency conversion.</p>
+            <br><br>
+            <a href="">More about fees</a>
+        </div>
+       </section>
+
+       <!-- Last button -->
+        <section class="lastbt">
+            <h3>Sign up and get started.</h3>
+            <button>Get Started</button>
+        </section>
+
+      <!-- Bottom Menu -->
+       <section class="lastmenu">
+        <div class="toplast">
+            <a href="">Help</a>
+            <a href="">Contact</a>
+            <a href="">Fees</a>
+            <a href="">Security</a>
+            <a href="">Features</a>
+            <a href="">Shop</a>
+        </div>
+        <hr>
+        <div class="btmlast">
+            <div class="leftt">
+                <a href="">About</a>
+                <a href="">Newsroom</a>
+                <a href="">Jobs</a>
+                <a href="">Developers</a>
+            </div>
+            <div class="rightt">
+                <p>© 1999–2025 All rights reserved.</p>
+                <div class="mumuas">
+                   <a href="">Accessibility</a>
+                   <a href="">Cookies</a>
+                   <a href="">Privacy</a>
+                   <a href="">Legal</a>
+                </div>
+            </div>
+        </div>
+        <small style="color: gray; font-size: 12px;">PayPal Pte. Ltd. is licensed by the Monetary Authority of Singapore as a Major Payment Institution under the Payment Services Act 2019.</small>
+       </section>
+       <script>
+        const check = () => {
+            alert("clciked")
+        }
+       </script>
+</body>
+</html>
