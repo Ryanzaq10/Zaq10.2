@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Parent */
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 150px;
+}
+/* 1st item */
+.first{
+    padding-block: 20px;
+}
+.head1{
+    padding-block: 20px;
+}
+.img1{
+    background: lightcoral;
+}
+.info1{
+    padding: 30px;
+    text-align: center;
+    background: lightcyan;
+}
